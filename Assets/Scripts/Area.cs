@@ -5,13 +5,15 @@ using UnityEngine;
 public class Area  {
 
     public string nombre;
+    public string label;
     public double latitud;
     public double longitud;
     public double radio;
 
-    public Area(string n, double la, double lo, double rad)
+    public Area(string n, string lab, double la, double lo, double rad)
     {
         this.nombre = n;
+        this.label = lab;
         this.latitud = la;
         this.longitud = lo;
         this.radio = rad;
@@ -19,7 +21,9 @@ public class Area  {
 
     public override string ToString()
     {
-        return "Nombre: " + this.nombre + "\nLatitud: " + this.latitud + "; Longitud: " + this.longitud + "\nRadio: " + this.radio;
+        return "Nombre: " + this.nombre + "\nEtiqueta: " + this.label +
+            "\nLatitud: " + this.latitud + "; Longitud: " + this.longitud + 
+            "\nRadio: " + this.radio;
     }
 
 }

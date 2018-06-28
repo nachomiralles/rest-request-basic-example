@@ -22,7 +22,8 @@ public class PedirDatos : MonoBehaviour {
                 double lat = content["documents"][i]["fields"]["latitud"]["doubleValue"];
                 double lon = content["documents"][i]["fields"]["longitud"]["doubleValue"];
                 double rad = content["documents"][i]["fields"]["radio"]["doubleValue"];
-                Area a = new Area(name, lat, lon, rad);
+                string lab = content["documents"][i]["fields"]["etiqueta"]["stringValue"];
+                Area a = new Area(name, lab, lat, lon, rad);
                 areas.Add(a);
             }
             setUIText();
